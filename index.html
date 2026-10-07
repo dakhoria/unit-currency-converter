@@ -7,11 +7,93 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- Шапка з назвою -->
-    <!-- Блок вибору типу конвертації (валюта/довжина/вага) -->
-    <!-- Форма введення значення й одиниць -->
-    <!-- Блок результату -->
-    <!-- Підвал -->
+    <header>
+      <h1>Конвертер валют і одиниць</h1>
+    </header>
+
+    <main>
+      <section id="conversion-type">
+        <h2>Вибір типу конвертації</h2>
+        <form>
+          <input
+            type="radio"
+            id="mode-currency"
+            name="conversion-mode"
+            value="currency"
+            checked
+          />
+          <label for="mode-currency">Валюта</label>
+
+          <input
+            type="radio"
+            id="mode-length"
+            name="conversion-mode"
+            value="length"
+          />
+          <label for="mode-length">Довжина</label>
+
+          <input
+            type="radio"
+            id="mode-weight"
+            name="conversion-mode"
+            value="weight"
+          />
+          <label for="mode-weight">Вага</label>
+        </form>
+      </section>
+
+      <section id="conversion-form">
+        <h2>Форма конвертації</h2>
+        <form>
+          <label for="input-value">Значення для перерахунку:</label>
+          <input
+            type="number"
+            id="input-value"
+            name="amount"
+            min="0"
+            step="0.01"
+            placeholder="100.00"
+            required
+          />
+
+          <label for="unit-from">Вихідна одиниця / валюта:</label>
+          <select id="unit-from" name="from">
+            <option value="uah">UAH — Українська гривня</option>
+            <option value="usd">USD — Долар США</option>
+            <option value="eur">EUR — Євро</option>
+            <option value="m">м — Метри</option>
+            <option value="km">км — Кілометри</option>
+            <option value="kg">кг — Кілограми</option>
+          </select>
+
+          <label for="unit-to">Цільова одиниця / валюта:</label>
+          <select id="unit-to" name="to">
+            <option value="usd">USD — Долар США</option>
+            <option value="eur">EUR — Євро</option>
+            <option value="uah">UAH — Українська гривня</option>
+            <option value="km">км — Кілометри</option>
+            <option value="m">м — Метри</option>
+            <option value="kg">кг — Кілограми</option>
+          </select>
+
+          <button type="submit">Розрахувати</button>
+        </form>
+      </section>
+
+      <section id="conversion-result">
+        <h2>Результат конвертації</h2>
+        <p>Орієнтовний результат: <strong>100.00 UAH = 2.41 USD</strong></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Примітка: наведений курс валют та коефіцієнти є орієнтовними і
+        використовуються в навчальних цілях.
+      </p>
+      <p>© 2026 Хом'як Д. Д., група ІП-52</p>
+    </footer>
+
     <script src="js/app.js"></script>
   </body>
 </html>
