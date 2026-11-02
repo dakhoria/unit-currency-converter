@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  background-color: #f4f5f7;
+  color: #333;
+}
+
+input[type="number"],
+select {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  font-family: inherit;
+}
+
+input[type="radio"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+input[type="number"]:focus,
+select:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+button {
+  padding: 12px 24px;
+  border-radius: 6px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #2980b9;
+}
